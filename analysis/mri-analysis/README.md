@@ -10,7 +10,7 @@
 ### Make sure docker is running on the imac
 ### On the terminal, type:
 ```
-cd /Users/qigroup/Documents/projects/{projectname}/
+cd /Users/qigroup/Documents/project/{projectname}/
 docker pull nipy/heudiconv
 docker run --rm -it --entrypoint=bash -v $(pwd):/data nipy/heudiconv:latest
 ```
