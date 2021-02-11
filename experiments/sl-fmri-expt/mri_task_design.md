@@ -2,8 +2,6 @@
 ## Last Updated by Julie M. Schneider on 02/11/2021
 
 ### Data Description
-All derivatives are located on the QLAB server, in the BLAST folder > derivatives > fsl
-
 There are many iterations of the data:
 - featquery: location of outputs from cluster/ROI specific analyses
 - firstlevelanalysis: individual level analysis (normalized is irrelevent, and nosmoothing means no smoothing kernel was applied) 
@@ -36,4 +34,29 @@ Each subject has their own individual folder. Within each subject folder are .fe
 - sub-blastID_task-langloc_run-02_space-MNI152NLin2009cAsym_desc-preproc_bold_langloc.feat
 
 Focusing only on the SL data, within each .feat is a stats folder containing 4 copes. If the parent folder contains a 1 or 2 (meaning run 1 or 2) then the copes correspond to these contrasts:
+|               	| ASL Task                    	|                   	|                       	| VSL Task                   	|                   	|                       	|
+|---------------	|-----------------------------	|-------------------	|-----------------------	|----------------------------	|-------------------	|-----------------------	|
+|     Cope      	|     Name                    	|     TSL Random    	|     SSL Structured    	|     Name                   	|     LSL Random    	|     VSL Structured    	|
+|     Cope 1    	|     Tone Rand > Rest        	|          1        	|            0          	|     Letter Rand > Rest     	|          1        	|            0          	|
+|     Cope 2    	|     Speech Struct > Rest    	|          0        	|            1          	|     Image Struct > Rest    	|          0        	|            1          	|
+|     Cope 3    	|     Speech>Tone             	|         -1        	|            1          	|     Image> Letter          	|         -1        	|            1          	|
+|     Cope 4    	|     Mean                    	|          1        	|            1          	|     Mean                   	|          1        	|            1          	|
 
+If the parent folder contains a 3 or 4 (meaning run 3 or 4) then the copes correspond to these contrasts:
+
+|               	| ASL Task                 	|                       	|                   	| VSL Task                   	|                       	|                   	|
+|---------------	|--------------------------	|-----------------------	|-------------------	|----------------------------	|-----------------------	|-------------------	|
+|     Cope      	|     Contrast Name        	|     TSL Structured    	|     SSL Random    	|     Name                   	|     LSL Structured    	|     VSL Random    	|
+|     Cope 1    	|     Tone Struct> Rest    	|            1          	|          0        	|     Letter Struct> Rest    	|            1          	|          0        	|
+|     Cope 2    	|     Speech Rand> Rest    	|            0          	|          1        	|     Image Rand> Rest       	|            0          	|          1        	|
+|     Cope 3    	|     Speech>Tone          	|           -1          	|          1        	|     Image>Letter           	|           -1          	|          1        	|
+|     Cope 4    	|     Mean                 	|            1          	|          1        	|     Mean                   	|            1          	|          1        	|
+
+### Organization of Higher Level Analyses
+We next average across runs that are the same (i.e. 1 & 2/3 & 4), for each task, within an individual. Once again, each subject has their own individual folder. The most important folders are:
+1. ASL.gfeat
+2. VSL.gfeat
+3. langloc.gfeat
+* any _norm folders were failed attempts to normalize the data and should ultimately be deleted. *
+
+Within each .gfeat we have 4 cope#.feat folders. 
