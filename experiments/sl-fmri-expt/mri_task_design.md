@@ -85,7 +85,7 @@ Within each .gfeat we have 4 cope#.feat folders corresponding to the 4 runs of d
 |     Cope 2              	|     Run 1-2 task > Run 3-4 task    	|       1      	|       1      	|       -1     	|       -1     	|
 |     Cope 3              	|     Task > Rest                    	|       1      	|       1      	|       1      	|       1      	|
 
-* The same is true for the VSL task. Simply replace 'Tone' with 'Letter' and 'Speech' with 'Image' *
+**The same is true for the VSL task. Simply replace 'Tone' with 'Letter' and 'Speech' with 'Image'
 
 ### Organization of Group Level Analyses
 Group level analyses are organized different than previous analyses. While first and higher level analyses should rarely (if ever) change, group level analyses will be re-run based on the research question of interest. Parameters (cluster threshold, use of randomise, inclusion of a covariate, etc.) may vary, but the end result is a group average across a condition(s) of interest. As can be seen in this folder, there are comparisons containing group averages, rather than individual folders.
