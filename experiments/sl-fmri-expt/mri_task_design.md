@@ -59,4 +59,31 @@ We next average across runs that are the same (i.e. 1 & 2/3 & 4), for each task,
 3. langloc.gfeat
 * any _norm folders were failed attempts to normalize the data and should ultimately be deleted. *
 
-Within each .gfeat we have 4 cope#.feat folders. 
+Within each .gfeat we have 4 cope#.feat folders corresponding to the 4 runs of data. Within each cope#.feat folder are 3 additional copes (within the stats folder). The organization of these contrasts are as follows:
+
+| Parent Folder  = Cope 1 	|     Contrast Name                    	|     Run 1    	|     Run 2    	|     Run 3    	|     Run 4    	|
+|-------------------------	|--------------------------------------	|--------------	|--------------	|--------------	|--------------	|
+|     Cope 1              	|     Tone Structured > Tone Random    	|       -1     	|       -1     	|       1      	|       1      	|
+|     Cope 2              	|     Tone Random > Tone Structured    	|       1      	|       1      	|       -1     	|       -1     	|
+|     Cope 3              	|     Tone > Rest                      	|       1      	|       1      	|       1      	|       1      	|
+
+| Parent Folder  = Cope 2 	|     Contrast Name                        	|     Run 1    	|     Run 2    	|     Run 3    	|     Run 4    	|
+|-------------------------	|------------------------------------------	|--------------	|--------------	|--------------	|--------------	|
+|     Cope 1              	|     Speech Random > Speech Structured    	|       -1     	|       -1     	|       1      	|       1      	|
+|     Cope 2              	|     Speech Structured > Speech Random    	|       1      	|       1      	|       -1     	|       -1     	|
+|     Cope 3              	|     Speech > Rest                        	|       1      	|       1      	|       1      	|       1      	|
+
+| Parent Folder  = Cope 3 	|     Contrast Name         	|     Run 1    	|     Run 2    	|     Run 3    	|     Run 4    	|
+|-------------------------	|---------------------------	|--------------	|--------------	|--------------	|--------------	|
+|     Cope 1              	|     Random > Structure    	|       -1     	|       -1     	|       1      	|       1      	|
+|     Cope 2              	|     Structure > Random    	|       1      	|       1      	|       -1     	|       -1     	|
+|     Cope 3              	|     Speech > Tone         	|       1      	|       1      	|       1      	|       1      	|
+
+| Parent Folder  = Cope 4 	|     Contrast Name                  	|     Run 1    	|     Run 2    	|     Run 3    	|     Run 4    	|
+|-------------------------	|------------------------------------	|--------------	|--------------	|--------------	|--------------	|
+|     Cope 1              	|     Run 3-4 task > Run 1-2 task    	|       -1     	|       -1     	|       1      	|       1      	|
+|     Cope 2              	|     Run 1-2 task > Run 3-4 task    	|       1      	|       1      	|       -1     	|       -1     	|
+|     Cope 3              	|     Task > Rest                    	|       1      	|       1      	|       1      	|       1      	|
+
+### Organization of Group Level Analyses
+Group level analyses are organized different than previous analyses. While first and higher level analyses should rarely (if ever) change, group level analyses will be re-run based on the research question of interest. Parameters (cluster threshold, use of randomise, inclusion of a covariate, etc.) may vary, but the end result is a group average across a condition(s) of interest. As can be seen in this folder, there are comparisons containing group averages, rather than individual folders.
